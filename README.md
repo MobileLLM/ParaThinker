@@ -6,13 +6,14 @@
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-FFD21E)](https://huggingface.co/Leslie04/ParaThinker-1.5B)
 
 <div align="center">
-<img src="assets/logo.png" style="width: 10%;" />
+<img src="assets/logo.png" style="width: 20%;" />
 </div>
 
 <p align="center">
     💡&nbsp;<a href="#-key-findings">Key Findings</a>
     | 📈&nbsp;<a href="#-scaling-results">Scaling Results</a>
     | 🔥&nbsp;<a href="#-models">Models</a>
+    | 📝&nbsp;<a href="#-open-source-list">Open Source List</a>
 </p>
 
 </div>
@@ -50,7 +51,7 @@ We would release the full code for training and inference, along with evaluation
 
 ---
 
-📈 Scaling Results
+## 📈 Scaling Results
 
 Evaluated on math reasoning tasks, scaling parallel paths `P` from 1 to 8.
 
@@ -72,7 +73,7 @@ ParaThinker models based on DeepSeek-R1-Distill-Qwen versions:
 
 ### Usage Example with Inference Engine for ParaThinker
 
-For efficient parallel inference using our customized vLLM engine, refer to the [Inference Submodule README](inference/README.md). This submodule implements the native parallel thinking inference engine, leveraging PagedAttention for KV cache reuse. Also see the quick start example in [`inference/examples/parathinker/example.py`](inference/examples//parathinker/example.py) for usage.
+For efficient parallel inference using our customized vLLM engine, refer to the [Inference Submodule README](https://github.com/LeslieKid/vllm-parathinker/blob/d30de3c71c49e08ea0944ba6586788fdf53ea4e6/README.md). This submodule implements the native parallel thinking inference engine, leveraging PagedAttention for KV cache reuse. Also see the quick start example in [`inference/examples/parathinker/example.py`](https://github.com/LeslieKid/vllm-parathinker/blob/d30de3c71c49e08ea0944ba6586788fdf53ea4e6/examples/parathinker/example.py) for usage.
 
 ---
 
