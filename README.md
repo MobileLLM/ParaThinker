@@ -6,7 +6,7 @@
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-FFD21E)](https://huggingface.co/Leslie04/ParaThinker-1.5B)
 
 <div align="center">
-<img src="assets/logo.jpg" style="width: 10%;" />
+<img src="assets/logo.png" style="width: 10%;" />
 </div>
 
 <p align="center">
