@@ -3,6 +3,7 @@
 set -e
 
 MODEL="deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+# You can reach dataset in https://huggingface.co/datasets/Leslie04/parathinker-math-6K
 DATASET_PATH="Leslie04/parathinker-math-6K/train" # Set your own training dataset path here
 EVAL_DATASET_PATH="Leslie04/parathinker-math-6K/test"
 OUTPUT_DIR="train/ParaThinker-1.5B" # Set output directory for checkpoints store
