@@ -4,6 +4,7 @@
 
 [![Paper](https://img.shields.io/badge/arXiv-2509.04475-red)](https://arxiv.org/abs/2509.04475)
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-FFD21E)](https://huggingface.co/Leslie04/ParaThinker-1.5B)
+[![dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/Leslie04/parathinker-math-6K)
 
 <div align="center">
 <img src="assets/logo.png" style="width: 20%;" />
@@ -12,11 +13,18 @@
 <p align="center">
     💡&nbsp;<a href="#-key-findings">Key Findings</a>
     | 📈&nbsp;<a href="#-scaling-results">Scaling Results</a>
-    | 🔥&nbsp;<a href="#-models">Models</a>
+    | 🔥&nbsp;<a href="#-models">Models(infer & SFT)</a>
     | 📝&nbsp;<a href="#-open-source-list">Open Source List</a>
 </p>
 
 </div>
+
+## Updates
+
+- **[2025-11-01]** 🎉 Released the [parathinker-math-6K dataset](https://huggingface.co/datasets/Leslie04/parathinker-math-6K) and training scripts.
+- **[2025-10-02]** 🚀 Updated the inference engine and released the improved [ParaThinker-1.5B model](https://huggingface.co/Leslie04/ParaThinker-1.5B).
+
+---
 
 ## 🌟 About
 
@@ -75,11 +83,35 @@ ParaThinker models based on DeepSeek-R1-Distill-Qwen versions:
 
 For efficient parallel inference using our customized vLLM engine, refer to the [Inference Submodule README](https://github.com/LeslieKid/vllm-parathinker/blob/d30de3c71c49e08ea0944ba6586788fdf53ea4e6/README.md). This submodule implements the native parallel thinking inference engine, leveraging PagedAttention for KV cache reuse. Also see the quick start example in [`inference/examples/parathinker/example.py`](https://github.com/LeslieKid/vllm-parathinker/blob/d30de3c71c49e08ea0944ba6586788fdf53ea4e6/examples/parathinker/example.py) for usage.
 
+### Quick Start: SFT for ParaThinker-1.5B
+
+We use custom [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) to train native parallel thinking model.
+
+**Build Conda Environment:** The following is a simplest script to build a conda environment for ParaThinker training:
+```sh
+set -e 
+
+eval "$(conda shell.bash hook)"
+if ! conda env list | grep -q "parathinker-sft"; then
+    conda create -n parathinker-sft python=3.11
+fi
+
+conda activate parathinker-sft
+
+cd ./train/LLaMA-Factory
+pip install -e ".[torch,metrics]"
+
+cd ../transformers
+pip install -e .
+```
+
+**Dataset Installation and SFT Running:** Install [parathinker-math-6K dataset](https://huggingface.co/datasets/Leslie04/parathinker-math-6K) and then use the [example training script](./train/scripts/ds-1.5b-full.sh) to quickly start a SFT on [deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B).
+
 ---
 
 ## 📝 Open Source List
 - [x] Inference Engine based on vLLM
 - [x] ParaThinker-1.5B Model
 - [ ] ParaThinker-7B Model
-- [ ] SFT dataset and training script based on llama-factory
+- [x] SFT dataset and training script based on llama-factory
 - [ ] Evaluation script
