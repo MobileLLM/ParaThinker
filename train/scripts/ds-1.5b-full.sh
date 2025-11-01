@@ -5,7 +5,7 @@ set -e
 MODEL="deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
 DATASET_PATH="Leslie04/parathinker-math-6K/train" # Set your own training dataset path here
 EVAL_DATASET_PATH="Leslie04/parathinker-math-6K/test"
-OUTPUT_DIR="train/ParaThinker-1.5B"
+OUTPUT_DIR="train/ParaThinker-1.5B" # Set output directory for checkpoints store
 DEEPSPEED_CONFIG="train/config/ds_z3_config.json"
 WANDB_DISABLED=true
 
