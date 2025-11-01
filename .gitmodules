@@ -5,3 +5,7 @@
 	path = train/LLaMA-Factory
 	url = https://github.com/LeslieKid/LLaMA-Factory.git
 	branch = main
+[submodule "train/transformers"]
+	path = train/transformers
+	url = https://github.com/LeslieKid/transformers.git
+	branch = main
