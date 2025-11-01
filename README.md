@@ -21,7 +21,7 @@
 
 ## Updates
 
-- **[2025-11-01]** 🎉 Released the [parathinker-math-6K dataset](https://huggingface.co/datasets/Leslie04/parathinker-math-6K) and training scripts.
+- **[2025-11-01]** 🎉 Released the [parathinker-math-6K dataset](https://huggingface.co/datasets/Leslie04/parathinker-math-6K) and [training scripts](https://github.com/MobileLLM/ParaThinker?tab=readme-ov-file#quick-start-sft-for-parathinker-15b).
 - **[2025-10-02]** 🚀 Updated the inference engine and released the improved [ParaThinker-1.5B model](https://huggingface.co/Leslie04/ParaThinker-1.5B).
 
 ---
